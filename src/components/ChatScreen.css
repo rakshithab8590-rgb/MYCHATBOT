@@ -1,0 +1,87 @@
+/* Main Screen */
+.chat-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f9fafb;
+}
+
+/* Chat Area */
+.chat-area {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+}
+
+/* Bot Message */
+.bot {
+  background: #eef2ff;
+  padding: 12px 15px;
+  border-radius: 18px 18px 18px 5px;
+  margin-bottom: 12px;
+  max-width: 75%;
+  font-size: 14px;
+}
+
+/* User Message */
+.user {
+  background: #4f46e5;
+  color: white;
+  padding: 12px 15px;
+  border-radius: 18px 18px 5px 18px;
+  margin-bottom: 12px;
+  margin-left: auto;
+  max-width: 75%;
+  font-size: 14px;
+}
+
+/* Input Container */
+/* Input Container */
+.chat-input {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background: white;
+  border-top: 1px solid #eee;
+  gap: 10px;
+
+  position: sticky;
+  bottom: 0;
+
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Input Field */
+.chat-input input {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 25px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+}
+
+/* Input Focus Effect */
+.chat-input input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 5px rgba(79, 70, 229, 0.3);
+}
+
+/* Send Button */
+
+.chat-input button {
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Button Hover */
+.input-box button:hover {
+  background: #3730a3;
+  transform: scale(1.05);
+}
