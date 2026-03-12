@@ -1,59 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./ChatScreen.css";
 
-export default function ChatScreen({ mode }) {
+export default function ChatScreen() {
 
-  // ✅ FIRST: helper function
-  function getInitialMessage(type) {
-    switch (type) {
-      case "course":
-        return "📘 Which subject do you need help with?";
-
-      case "deadline":
-        return "⏰ Let me check your upcoming assignments.";
-
-      case "progress":
-        return "🏆 Let’s review your learning progress.";
-
-      default:
-        return "Hi 👋 I'm your LMS assistant!";
-    }
-  }
-
-  // ✅ SECOND: useState
   const [messages, setMessages] = useState([
-    { sender: "bot", text: getInitialMessage(mode) }
+    { sender: "bot", text: "Hi 👋 I'm your LMS assistant! How can I help you today?" }
   ]);
 
   const [input, setInput] = useState("");
 
-  // ✅ THIRD: useEffect
-  useEffect(() => {
-    setMessages([
-      { sender: "bot", text: getInitialMessage(mode) }
-    ]);
-  }, [mode]);
-
-
-
-  // ✅ Send message
   const sendMessage = () => {
     if (!input.trim()) return;
 
     const newMessages = [
       ...messages,
       { sender: "user", text: input },
-      {
-        sender: "bot",
-        text: "Thanks! I’m processing your request..."
-      }
+      { sender: "bot", text: "Thanks! I’m processing your request..." }
     ];
 
     setMessages(newMessages);
     setInput("");
   };
-
-
 
   return (
     <div className="chat-screen">
@@ -75,6 +42,11 @@ export default function ChatScreen({ mode }) {
           placeholder="Ask me anything..."
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              sendMessage();
+            }
+          }}
         />
 
         <button onClick={sendMessage}>➤</button>

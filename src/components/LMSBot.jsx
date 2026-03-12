@@ -62,26 +62,7 @@ const handleFeature = (type) => {
                 Get instant help with courses and assignments.
               </p>
 
-             <Feature
-  icon="📘"
-  title="Course Assistant"
-  text="Access materials & resources"
-  onClick={() => handleFeature("course")}
-/>
-
-<Feature
-  icon="⏰"
-  title="Track Deadlines"
-  text="Never miss an assignment"
-  onClick={() => handleFeature("deadline")}
-/>
-
-<Feature
-  icon="🏆"
-  title="Monitor Progress"
-  text="Check grades & performance"
-  onClick={() => handleFeature("progress")}
-/>
+             
 
  <button
   className="start-btn"
@@ -129,7 +110,7 @@ const handleFeature = (type) => {
   </div>
 
 ) : (
-  <ChatScreen feature={selectedFeature} />
+  <ChatScreen/>
 )}
 
         </div>
