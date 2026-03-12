@@ -4,7 +4,7 @@ import "./ChatScreen.css";
 export default function ChatScreen() {
 
   const [messages, setMessages] = useState([
-    { sender: "bot", text: "Hi 👋 I'm your LMS assistant! How can I help you today?" }
+    { sender: "bot", text: "Hi 👋 I'm your LMS assistant Yukthi! How can I help you today?" }
   ]);
 
   const [input, setInput] = useState("");
