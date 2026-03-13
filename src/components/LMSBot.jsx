@@ -55,7 +55,7 @@ const handleFeature = (type) => {
   />
 </div>
 
-              <h2>LMS Bot</h2>
+              <h2>Yukthi</h2>
 
               <p className="desc">
                 Your intelligent learning companion.
