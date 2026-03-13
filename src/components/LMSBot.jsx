@@ -29,7 +29,7 @@ const handleFeature = (type) => {
           <div className="bot-header">
 
             <div>
-              <h3>LMS Bot ✨</h3>
+              <h3>YUKTHI Bot ✨</h3>
               <span className="online">Online • Ready to help</span>
             </div>
 
